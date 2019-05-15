@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/emomdzhiyan/react-humans/static/css/main.1fa38171.chunk.css",
-    "main.js": "/emomdzhiyan/react-humans/static/js/main.7ae036b9.chunk.js",
-    "main.js.map": "/emomdzhiyan/react-humans/static/js/main.7ae036b9.chunk.js.map",
-    "runtime~main.js": "/emomdzhiyan/react-humans/static/js/runtime~main.0a887bd5.js",
-    "runtime~main.js.map": "/emomdzhiyan/react-humans/static/js/runtime~main.0a887bd5.js.map",
-    "static/js/2.e420c5e2.chunk.js": "/emomdzhiyan/react-humans/static/js/2.e420c5e2.chunk.js",
-    "static/js/2.e420c5e2.chunk.js.map": "/emomdzhiyan/react-humans/static/js/2.e420c5e2.chunk.js.map",
-    "index.html": "/emomdzhiyan/react-humans/index.html",
-    "precache-manifest.105aad99906a2158125e5658b4fa11e0.js": "/emomdzhiyan/react-humans/precache-manifest.105aad99906a2158125e5658b4fa11e0.js",
-    "service-worker.js": "/emomdzhiyan/react-humans/service-worker.js",
-    "static/css/main.1fa38171.chunk.css.map": "/emomdzhiyan/react-humans/static/css/main.1fa38171.chunk.css.map"
+    "main.css": "/react-humans/static/css/main.1fa38171.chunk.css",
+    "main.js": "/react-humans/static/js/main.7ae036b9.chunk.js",
+    "main.js.map": "/react-humans/static/js/main.7ae036b9.chunk.js.map",
+    "runtime~main.js": "/react-humans/static/js/runtime~main.3b1a8bd8.js",
+    "runtime~main.js.map": "/react-humans/static/js/runtime~main.3b1a8bd8.js.map",
+    "static/js/2.e420c5e2.chunk.js": "/react-humans/static/js/2.e420c5e2.chunk.js",
+    "static/js/2.e420c5e2.chunk.js.map": "/react-humans/static/js/2.e420c5e2.chunk.js.map",
+    "index.html": "/react-humans/index.html",
+    "precache-manifest.ea0d9871e836bfd6fb40ef32f89eca68.js": "/react-humans/precache-manifest.ea0d9871e836bfd6fb40ef32f89eca68.js",
+    "service-worker.js": "/react-humans/service-worker.js",
+    "static/css/main.1fa38171.chunk.css.map": "/react-humans/static/css/main.1fa38171.chunk.css.map"
   }
 }
