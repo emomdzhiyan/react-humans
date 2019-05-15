@@ -3,7 +3,7 @@ import {
   DELETE_HUMAN,
   EDIT_HUMAN,
   GET_HUMAN,
-  NEW_HUMAN,
+  SET_NEW_HUMAN,
 } from '../constants';
 
 const initialState = {
@@ -39,7 +39,7 @@ function humans(state = initialState, action) {
     }
     case EDIT_HUMAN: {
       const editedHumans = [...state.humans];
-      const changedHuman = editedHumans.find( human => human.id === action.payload.id);
+      const changedHuman = editedHumans.find(human => human.id === action.payload.id);
       changedHuman.name = action.payload.name;
       changedHuman.notes = action.payload.notes;
       return {
@@ -61,7 +61,7 @@ function humans(state = initialState, action) {
         selected: true,
       };
     }
-    case NEW_HUMAN: {
+    case SET_NEW_HUMAN: {
       return {
         ...state,
         name: '',

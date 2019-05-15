@@ -15,5 +15,17 @@
 .list-element {
     padding: 5px 15px;
     display: block;
-    cursor: pointer;
+    div {
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    outline: none;
 }

@@ -4,11 +4,11 @@ import {
   DELETE_HUMAN,
   EDIT_HUMAN,
   GET_HUMAN,
-  NEW_HUMAN,
+  SET_NEW_HUMAN,
 } from '../constants';
 
 export const addHuman = createAction(ADD_HUMAN);
 export const deleteHuman = createAction(DELETE_HUMAN);
 export const editHuman = createAction(EDIT_HUMAN);
 export const getHuman = createAction(GET_HUMAN);
-export const newHuman = createAction(NEW_HUMAN);
+export const setNewHuman = createAction(SET_NEW_HUMAN);
