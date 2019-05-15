@@ -6,7 +6,17 @@ import cn from 'classnames';
 
 import { addHuman, deleteHuman, editHuman } from '../../store/actions';
 
-const Human = memo((props) => {
+const Human = memo((
+  {
+    id,
+    name: propsName,
+    notes: propsNotes,
+    selected,
+    addHuman: addNewHuman,
+    deleteHuman: deleteData,
+    editHuman: editData,
+  },
+) => {
   const [name, setName] = useState('');
   const [notes, setNotes] = useState('');
   const [nameError, setNameError] = useState(false);
@@ -16,13 +26,15 @@ const Human = memo((props) => {
     setName(text);
     setNameError(false);
   };
-  const handleNotes = (e) => {
-    setNotes(e.target.value);
+  const handleNotes = ({ target: { value } }) => {
+    setNotes(value);
   };
   const onSaveClick = () => {
-    const id = uid();
+    const newUid = uid();
     if (name) {
-      props.addHuman({ name, notes, id });
+      const humanName = name.trim();
+      const humanNotes = notes.trim();
+      addNewHuman({ name: humanName, notes: humanNotes, id: newUid });
       setName('');
       setNotes('');
     } else {
@@ -30,7 +42,7 @@ const Human = memo((props) => {
     }
   };
   const onDelete = () => {
-    props.deleteHuman(props.id);
+    deleteData(id);
     setName('');
     setNotes('');
   };
@@ -39,9 +51,9 @@ const Human = memo((props) => {
       const payload = {
         name,
         notes,
-        id: props.id,
+        id,
       };
-      props.editHuman(payload);
+      editData(payload);
       setName('');
       setNotes('');
     } else {
@@ -49,16 +61,16 @@ const Human = memo((props) => {
     }
   };
   useEffect(() => {
-    if (props.selected) {
-      setName(props.name);
-      setNotes(props.notes);
+    if (selected) {
+      setName(propsName);
+      setNotes(propsNotes);
       setNameError(false);
     } else {
       setName('');
       setNotes('');
       setNameError(false);
     }
-  }, [props.id]);
+  }, [id]);
   return (
     <div className="col-6">
       <form className="mt-3">
@@ -83,7 +95,7 @@ const Human = memo((props) => {
             onChange={handleNotes}
           />
         </div>
-        {props.selected
+        {selected
           ? (
             <div className="d-flex justify-content-between">
               <button type="button" className="btn btn-danger" onClick={onDelete}>Delete</button>

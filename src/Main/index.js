@@ -1,10 +1,11 @@
-import React, { memo } from 'react';
+import React, { memo, Fragment } from 'react';
+
 import Header from '../components/Header';
 import HumansList from '../components/HumansList';
 import Human from '../components/Human';
 
 const Main = memo(() => (
-  <div>
+  <Fragment>
     <Header />
     <div className="container">
       <div className="row">
@@ -12,7 +13,7 @@ const Main = memo(() => (
         <Human />
       </div>
     </div>
-  </div>
+  </Fragment>
 ));
 
 export default Main;

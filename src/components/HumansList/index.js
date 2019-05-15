@@ -2,6 +2,7 @@ import React, { memo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import cn from 'classnames';
+
 import './style.scss';
 import { getHuman, setNewHuman } from '../../store/actions';
 
@@ -70,14 +71,12 @@ const HumansList = memo((
             ? renderedArr.map(human => (
               <li
                 key={human.id}
-
                 className={cn('list-element list-group-item-action', {
                   'bg-white': human.id === id,
                 })}
               >
                 <div
-                  onKeyPress={() => {
-                  }}
+                  onKeyPress={() => {}}
                   onClick={() => onHumanClick(human.id)}
                   role="button"
                   tabIndex={-1}

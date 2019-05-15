@@ -1,4 +1,5 @@
 import { createAction } from 'redux-actions';
+
 import {
   ADD_HUMAN,
   DELETE_HUMAN,
